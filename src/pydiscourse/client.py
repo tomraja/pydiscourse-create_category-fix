@@ -901,7 +901,7 @@ class DiscourseClient(object):
 
         if parent:
             parent_id = None
-            for category in self.categories():
+            for category in self.get_site_info()["categories"]:
                 if category["name"] == parent:
                     parent_id = category["id"]
                     continue
